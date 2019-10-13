@@ -1,15 +1,23 @@
+//import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import React, { Component } from "react";
-import "./App.scss";
-import Navbar from "./components/Navbar/Navbar";
-import TourList from './components/TourList/index'
+import "bootstrap/dist/css/bootstrap.min.css";
+import uuid from "uuid";
+
+import TodoInput from "./components/TodoInput";
+import TodoList from "./components/TodoList";
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Navbar />
-        <TourList />
-      </React.Fragment>
+      <div>
+        <div className="container">
+          <div className="row">
+            <TodoInput />
+            <TodoList />
+          </div>
+        </div>
+      </div>
     );
   }
 }
